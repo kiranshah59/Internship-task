@@ -1,62 +1,35 @@
 # Internship-task
-# Week 2 – Data Collection
 
-This week focuses on working with APIs, handling JSON data, and saving structured data into files like CSV. The tasks progress from basic API fetching to real-world data analysis.
+Week 2 – Data Collection & API Integration
+This week focuses on working with APIs, handling JSON data, storing data in CSV files, and performing basic data analysis using Python.
 
----
+Tasks Overview:
 
-## Tasks Overview
+Task 1 :  Fetch Users
+Fetch user data from JSONPlaceholder API.
+Display name, email, and city.
+API: https://jsonplaceholder.typicode.com/users
+Learned:
+API requests
+JSON handling
 
-### Task 1 · Easy — Fetch & Print Users
-- Fetch user data from JSONPlaceholder API
-- Print:
-  - Name
-  - Email
-  - City
+Task 2 : CSV Storage & Filtering
+Fetch posts from API.
+Save data to posts.csv.
+Filter posts where title has more than 5 words.
+Save filtered data to filtered_posts.csv.
+API: https://jsonplaceholder.typicode.com/posts
+Learned:
+CSV handling
+Data filtering
 
-**API Endpoint:** https://jsonplaceholder.typicode.com/users
-
-**Concepts Learned:**
-- HTTP requests using `requests`
-- Handling JSON responses
-- Looping through API data
-
----
-
-### Task 2 · Medium — Fetch & Save to CSV
-- Fetch posts from API
-- Save data into `posts.csv`
-- Read CSV and filter posts
-- Create `filtered_posts.csv`
-
-**API Endpoint:** https://jsonplaceholder.typicode.com/posts
-
-**CSV Columns:**
-- id
-- title
-- body
-
-**Filter :**
-- Titles with more than 5 words
-
-**Concepts Learned:**
-- CSV writing (`DictWriter`)
-- CSV reading (`DictReader`)
-- Data filtering
-- File handling
-
----
-
-### Task 3 · Hard — Weather API + Analysis
-- Fetch 7-day weather forecast for Lalitpur using Open-Meteo API
-- Save data into `weather.csv`
-- Analyze:
-  - Hottest day
-  - Coldest day
-- Save summary into `summary.txt`
-
-**API Endpoint:** https://api.open-meteo.com/v1/forecast
-
-
-
----
+Task 3 : Weather API Analysis
+Fetch 7-day weather data for Lalitpur.
+Save to weather.csv.
+Find hottest and coldest day.
+Save summary in summary.txt.
+API: https://api.open-meteo.com/v1/forecast
+Learned:
+Real API usage
+Data analysis
+File handling
