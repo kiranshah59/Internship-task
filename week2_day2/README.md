@@ -36,7 +36,7 @@ A script that:
 * 🇬🇧 UK
 * 🇦🇺 Australia
 
-# 📂 Output Files
+# Output Files
 
 | File            | Purpose                                     |
 | --------------- | ------------------------------------------- |
@@ -45,9 +45,8 @@ A script that:
 
 ---
 
-# Key Insights Generated
-
-The analysis answers:
+# Key Insights are:
+answer:
 
 * Which country publishes the most headlines
 * Average headline length per country
