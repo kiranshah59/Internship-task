@@ -29,9 +29,10 @@ load_dotenv()
 # Connect to MySQL server
 try:
     conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="admin"
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+    
         )
     cursor = conn.cursor()
 except mysql.connector.Error as err:

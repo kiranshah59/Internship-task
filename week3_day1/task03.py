@@ -25,9 +25,9 @@ load_dotenv()
 # Connect to MySQL server
 try:
     conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="admin",
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
     )
     cursor = conn.cursor()
     print("Connected to MySQL server successfully!")
@@ -59,9 +59,9 @@ params = {
 }
 
 cities = {
-    "delhi": {"latitude": 40.7128, "longitude": -74.0060},
-    "usa": {"latitude": 51.5074, "longitude": -0.1278},
-    "japan": {"latitude": 35.6762, "longitude": 139.6503}
+    "New York": {"latitude": 40.7128, "longitude": -74.0060},
+    "London": {"latitude": 51.5074, "longitude": -0.1278},
+    "Tokyo": {"latitude": 35.6762, "longitude": 139.6503}
 }
 
 for city, coords in cities.items():
@@ -69,10 +69,7 @@ for city, coords in cities.items():
     params["latitude"] = coords["latitude"]
     params["longitude"] = coords["longitude"]
 
-    response = requests.get(
-    "https://api.open-meteo.com/v1/forecast",
-    params=params
-)
+    response = requests.get(os.getenv("WEATHER_API_URL"), params=params)
 
     if response.status_code == 200:
         data = response.json()
